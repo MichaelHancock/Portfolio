@@ -83,6 +83,19 @@ function events() {
     //Smooth scroll to local a tags
     $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
+
+            //Close menu if item is clicked
+            if (isOpen === true) {
+                $(".main_nav").animate({
+                    'margin-top': '-=210px'
+                }, "fast");
+                $(".slide_in").animate({
+                    'margin-top': '-=245px'
+                }, "fast");
+
+                isOpen = false;
+            }
+
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -94,6 +107,7 @@ function events() {
                 }
             }
         });
+
     });
 
     $(window).scroll(function() {
@@ -186,18 +200,6 @@ function events() {
 
             isOpen = false;
         }
-    });
-
-    //Close menu if item is clicked
-    $('.slide_in li').click(function() {
-        $(".main_nav").animate({
-            'margin-top': '-=210px'
-        }, "fast");
-        $(".slide_in").animate({
-            'margin-top': '-=245px'
-        }, "fast");
-
-        isOpen = false;
     });
 
     //Close menu if anything other than the menu is clicked
