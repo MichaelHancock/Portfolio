@@ -88,10 +88,10 @@ function events() {
             if (isOpen === true) {
                 $(".main_nav").animate({
                     'margin-top': '-=210px'
-                }, "fast");
+                }, 400);
                 $(".slide_in").animate({
                     'margin-top': '-=245px'
-                }, "fast");
+                }, 400);
 
                 isOpen = false;
             }
@@ -168,53 +168,49 @@ function events() {
     $('.main_nav .menu_open').click(function() {
 
         if (isOpen === false) {
-            $(".main_nav").animate({
-                'margin-top': '+=210px'
-            }, "fast");
-            $(".slide_in").animate({
-                'margin-top': '+=245px'
-            }, "fast");
-
-            isOpen = true;
+            openMenu();
         } else {
-            $(".main_nav").animate({
-                'margin-top': '-=210px'
-            }, "fast");
-            $(".slide_in").animate({
-                'margin-top': '-=245px'
-            }, "fast");
-
-            isOpen = false;
+            closeMenu();
         }
     });
 
     //Close menu if window is resized
     $(window).resize(function() {
-        if (isOpen == true) {
-            $(".main_nav").animate({
-                'margin-top': '-=210px'
-            }, "fast");
-            $(".slide_in").animate({
-                'margin-top': '-=245px'
-            }, "fast");
-
-            isOpen = false;
-        }
+        closeMenu();
     });
 
     //Close menu if anything other than the menu is clicked
     $('section').click(function() {
+        closeMenu();
+    });
+
+    function openMenu() {
+        //Open slide in menu
+        if (isOpen === false) {
+            $(".main_nav").animate({
+                'margin-top': '+=210px'
+            }, 400);
+            $(".slide_in").animate({
+                'margin-top': '+=245px'
+            }, 400);
+
+            isOpen = true;
+        }
+    }
+
+    function closeMenu() {
+        //Close slide in menu
         if (isOpen === true) {
             $(".main_nav").animate({
                 'margin-top': '-=210px'
-            }, "fast");
+            }, 400);
             $(".slide_in").animate({
                 'margin-top': '-=245px'
-            }, "fast");
+            }, 400);
 
             isOpen = false;
         }
-    });
+    }
 }
 
 function animateMenu() {
