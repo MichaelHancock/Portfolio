@@ -1,0 +1,161 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    background-color: pink;
+    font-family: Calibri, sans-serif;
+}
+p {
+    font-size: 15pt;
+    text-align: justify;
+    font-weight: lighter;
+    -webkit-transition: font-size 0.5s, line-height 0.5s, opacity 0.5s;
+    -moz-transition: font-size 0.5s, line-height 0.5s, opacity 0.5s;
+    -o-transition: font-size 0.5s, line-height 0.5s, opacity 0.5s;
+    transition: font-size 0.5s, line-height 0.5s, opacity 0.5s;
+}
+a {
+    color: #FFF;
+    text-decoration: none;
+    -webkit-transition: line-height 0.5s, color 0.5s, text-decoration 0.5s;
+    -moz-transition: line-height 0.5s, color 0.5s, text-decoration 0.5s;
+    -o-transition: line-height 0.5s, color 0.5s, text-decoration 0.5s;
+    transition: line-height 0.5s, color 0.5s, text-decoration 0.5s;
+}
+hr {
+    -webkit-transition: margin 0.5s, opacity 0.5s, display 0.5s;
+    -moz-transition: margin 0.5s, opacity 0.5s, display 0.5s;
+    -o-transition: margin 0.5s, opacity 0.5s, display 0.5s;
+    transition: margin 0.5s, opacity 0.5s, display 0.5s;
+}
+.slide_in {
+    width: 100%;
+    height: 210px;
+    position: absolute;
+    top: -250px;
+    background-color: #FFF;
+    opacity: 0.97;
+    z-index: 10;
+}
+.slide_in ul {
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+}
+.slide_in ul li, .slide_in ul li a {
+    height: 35px;
+    margin: 5px 0;
+    display: block;
+    color: #a9a9a9;
+    font-size: 13pt;
+    line-height: 35px;
+    background-color: #f2f2f2;
+}
+.main_nav {
+    z-index: 5;
+    height: 100%;
+    width: 135px;
+    position: fixed;
+    background-color: #FFF;
+}
+.main_nav svg {
+    opacity: 1;
+    z-index: 6;
+    margin: 17.5px;
+    -webkit-transition: margin 0.5s, opacity 0.5s;
+    -moz-transition: margin 0.5s opacity 0.5s;
+    -o-transition: margin 0.5s opacity 0.5s;
+    transition: margin 0.5s opacity 0.5s;
+}
+.main_nav ul {
+    padding: 0;
+    width: 120px;
+    list-style: none;
+    text-align: right;
+    position: absolute;
+    top: -webkit-calc(50vh - 120px);
+    top: -o-calc(50vh - 120px);
+    top: calc(50vh - 120px);
+}
+.main_nav ul li a {
+    outline: none;
+    color: #a9a9a9;
+    display: block;
+    line-height: 40px;
+    font-size: 11pt;
+}
+.main_nav ul li a:hover {
+    color: #333333;
+    text-decoration: underline;
+}
+.menu_open {
+    display: none;
+}
+.main_nav p {
+    color: #a9a9a9;
+    position: absolute;
+    left: 50%;
+    margin-left: -46px;
+    bottom: 10px;
+    font-size: 10pt;
+}
+@media screen and (max-width: 920px) {
+    .main_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 100%;
+    }
+    .main_nav svg {
+        margin: 5px;
+        height: 40px;
+    }
+    .menu_open {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .menu_open div {
+        height: 3px;
+        width: 0;
+        background-color: #000;
+        position: relative;
+        top: 5px;
+    }
+    .menu_open .line_top {
+        top: 5px;
+    }
+    .menu_open .line_middle {
+        top: 10px;
+    }
+    .menu_open .line_bottom {
+        top: 15px;
+    }
+    .main_nav ul, .main_nav li, .main_nav p {
+        display: none;
+    }
+}
+@media screen and (max-width: 640px) {}
+
+/* - Media controls for adaptive height in main nav bar - */
+@media screen and (max-height: 378px) and (min-width: 920px) {
+    .main_nav svg {
+        opacity: 0;
+    }
+    .main_nav p {
+        opacity: 0;
+    }
+}
+@media screen and (max-height: 260px) and (min-width: 640px) {
+    .main_nav ul {
+        top: -5px;
+    }
+    .main_nav ul li a {
+        line-height: 20px;
+    }
+}

@@ -316,6 +316,9 @@ h1, h2 {
     z-index: 2;
     border-right: 4px solid #FFF;
 }
+.web .title_line_pink, .hobbyist_programmer .title_line_pink {
+    margin-top: -10px;
+}
 .web p, .hobbyist_programmer p, .freelance p, .contact p {
     max-width: 300px;
     display: block;
@@ -392,14 +395,6 @@ h1, h2 {
     -moz-transition: font-size 0.5s;
     -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
-}
-.side_title hr {
-    border: 1px solid #000;
-    width: 80%;
-    margin-top: 5px;
-}
-.hobbyist_programmer hr, .web hr {
-    border: 1px solid #d3044a;
 }
 .hobbyist_programmer .side_title h2 {
     color: #FFF;
@@ -549,13 +544,18 @@ h1, h2 {
 }
 .freelance hr {
     position: absolute;
-    right: 0px;
-    width: 90%;
+    right: 20px;
+    width: 75px;
+    margin-top: -30px;
 }
 .contact hr {
     position: absolute;
-    left: 0px;
-    width: 90%;
+    left: 20px;
+    width: 150px;
+    margin-top: -30px;
+}
+.freelance  p, .contact p {
+    margin-top: -20px;
 }
 footer {
     display: block;

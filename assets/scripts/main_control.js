@@ -56,19 +56,6 @@ $(document).ready(function() {
         }
     }
 
-    function pulseLines() {
-        lineID++;
-
-        if (lineID === 0) {
-            $('.cross_line:first-child').fadeTo(500, 0.4);
-            $('.cross_line:nth-child(2)').fadeTo(500, 1);
-        } else if (lineID === 1) {
-            $('.cross_line:first-child').fadeTo(500, 1);
-            $('.cross_line:nth-child(2)').fadeTo(500, 0.4);
-            lineID = 0;
-        }
-    }
-
     animateMenu();
     events();
 });
@@ -81,33 +68,30 @@ function events() {
     var completeROCKET = false;
 
     //Smooth scroll to local a tags
-    $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
 
-            //Close menu if item is clicked
-            if (isOpen === true) {
-                $(".main_nav").animate({
-                    'margin-top': '-=210px'
-                }, 400);
-                $(".slide_in").animate({
-                    'margin-top': '-=245px'
-                }, 400);
+        //Close menu if item is clicked
+        if (isOpen === true) {
+            $(".main_nav").animate({
+                'margin-top': '-=210px'
+            }, 400);
+            $(".slide_in").animate({
+                'margin-top': '-=245px'
+            }, 400);
 
-                isOpen = false;
+            isOpen = false;
+        }
+
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
             }
-
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-
+        }
     });
 
     $(window).scroll(function() {
