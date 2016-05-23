@@ -65,6 +65,7 @@ function events() {
     var isOpen = false;
     var wScroll = 0;
     var completeHR = false;
+    var completeSCREEN = false;
     var completeROCKET = false;
 
     //Smooth scroll to local a tags

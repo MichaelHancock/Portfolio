@@ -13,7 +13,8 @@
     <link rel="icon" href="assets/images/favicon.ico">
 
     <!-- Define page title and link css / javascript files -->
-    <title>Michael Hancock | My Work</title>
+    <title>Michael Hancock | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main_theme.css">
     <link rel="stylesheet" type="text/css" href="assets/css/work.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="assets/scripts/work_control.js"></script>
@@ -23,11 +24,11 @@
     <!-- Slide in menu -->
     <div class="slide_in">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#encryption_section">Encryption</a></li>
+            <li><a href="index.html">About</a></li>
             <li><a href="#ksp_section">KSP</a></li>
+            <li><a href="#website_section">Web Design</a></li>
+            <li><a href="#encryption_section">Encryption</a></li>
             <li><a href="#imaging_section">Medical Imaging</a></li>
-            <li><a href="#website_section">Cocktail Website</a></li>
         </ul>
     </div>
 
@@ -38,18 +39,19 @@
         <a href="index.html">
             <svg width="100" height="66" viewBox="0 0 363 235" preserveAspectRatio="xMidYMid meet">
                 <g transform="translate(0.000000,235.000000) scale(0.100000,-0.100000)" fill="#333333" stroke="none">
-                    <path d="M2320 1175l0-1175 155 0 155 0 0 549 0 549 80 76c137 128 262 170 394 132 77-23 153-96 187-181l24-60 3-532 3-533 155 0 155 0-4 553c-4 468-7 563-21 622-44 185-155 315-322 377-85 31-273 31-358 0-90-33-144-68-223-145l-73-70 0 506 0 507-155 0-155 0 0-1175zM653 1565c-99-27-214-96-305-183l-38-36 0 102 0 102-155 0-155 0 0-775 0-775 155 0 155 0 0 564 0 564 67 62c116 109 240 149 376 120 72-15 133-60 163-121 47-94 54-182 54-705l0-484 155 0 155 0 0 563 0 564 64 62c41 38 90 73 133 94 61 29 77 32 158 32 73-1 98-5 131-22 53-28 99-74 125-125 45-87 49-143 49-670l0-498 156 0 155 0-3 547c-4 528-5 551-26 628-47 169-138 291-265 353-218 106-453 51-670-157-38-36-71-61-75-55-5 5-27 35-51 66-119 159-323 232-508 183z"/>
+                    <path d="M2320 1175l0-1175 155 0 155 0 0 549 0 549 80 76c137 128 262 170 394 132 77-23 153-96 187-181l24-60 3-532 3-533 155 0 155 0-4 553c-4 468-7 563-21 622-44 185-155 315-322 377-85 31-273 31-358 0-90-33-144-68-223-145l-73-70 0 506 0 507-155 0-155 0 0-1175zM653 1565c-99-27-214-96-305-183l-38-36 0 102 0 102-155 0-155 0 0-775 0-775 155 0 155 0 0 564 0 564 67 62c116 109 240 149 376 120 72-15 133-60 163-121 47-94 54-182 54-705l0-484 155 0 155 0 0 563 0 564 64 62c41 38 90 73 133 94 61 29 77 32 158 32 73-1 98-5 131-22 53-28 99-74 125-125 45-87 49-143 49-670l0-498 156 0 155 0-3 547c-4 528-5 551-26 628-47 169-138 291-265 353-218 106-453 51-670-157-38-36-71-61-75-55-5 5-27 35-51 66-119 159-323 232-508 183z"
+                    />
                 </g>
             </svg>
         </a>
 
         <!-- Navigation links -->
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#encryption_section">Encryption</a></li>
+            <li><a href="index.html">About</a></li>
             <li><a href="#ksp_section">KSP</a></li>
+            <li><a href="#website_section">Web Design</a></li>
+            <li><a href="#encryption_section">Encryption</a></li>
             <li><a href="#imaging_section">Medical Imaging</a></li>
-            <li><a href="#website_section">Cocktail Website</a></li>
         </ul>
 
         <!-- Menu open icon -->
@@ -62,9 +64,45 @@
         <p>Michael Hancock</p>
     </nav>
 
+    <!-- KSP -->
+    <section class="kerbal">
+        <!-- Fly in robot div -->
+        <div class="rocket"></div>
+        <div class="rocket"></div>
+
+        <!-- Section title -->
+        <div class="title_container">
+            <h2>KSP Orbit Calculator</h2>
+            <hr class="title_line_black" />
+        </div>
+
+        <!-- Full width text -->
+        <p class="full_width">
+          The calculator I made for Kerbal Space Program used values from the game’s wiki, including: mass of planets, size of their sphere of influence and radius. Using these and some basic physics, the phase angle (the angle from one planet to another with the sun at the vertex) was calculated. Allowing a user to perform a Hohmann Transfer orbit between location and destination, using the minimum delta-v in the game.
+        </p>
+
+        <!-- Equation image -->
+        <img class="equation" src="assets/images/phase_angle.svg">
+
+        <!-- KSP gif -->
+        <img src="assets/images/ksp.gif">
+    </section>
+
     <!-- No script overides -->
     <noscript>
-
+        <style scoped type="text/css">
+            .main_nav .menu_open {
+                display: none
+            }
+            .space .rocket:nth-child(2) {
+                top: 10px;
+                left: 10px;
+            }
+            .space .rocket:nth-child(3) {
+                bottom: 10px;
+                right: 10px;
+            }
+        </style>
     </noscript>
 </body>
 

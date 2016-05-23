@@ -3,6 +3,16 @@ $(document).ready(function() {
     if ($(document).scrollTop() > 0)
         window.scrollTo(0, 0);
 
+    //Move in rockets
+    $('.kerbal .rocket:nth-child(1)').animate({
+        'top': '-=40px',
+        'left': '+=60px'
+    }, 1500);
+    $('.kerbal .rocket:nth-child(2)').animate({
+        'bottom': '+=60px',
+        'right': '-=40px'
+    }, 1500);
+
     animateMenu();
     events();
 });
