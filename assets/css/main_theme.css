@@ -591,6 +591,7 @@ footer {
     }
     .main_nav svg {
         margin: 5px;
+        margin-left: -10px;
         height: 40px;
     }
     .menu_open {
