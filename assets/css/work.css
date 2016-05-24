@@ -1,5 +1,5 @@
 html, body {
-    background-color: pink;
+    background-image: url('../images/background.png');
 }
 .main_nav a {
     font-size: 11.4pt;
@@ -30,15 +30,65 @@ html, body {
     border: 1px solid #333;
 }
 .encryption_left, .encryption_right {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
     box-sizing: border-box;
-    background-size: auto;
-    background-image: url('../images/background.png');
+}
+.encryption_left {}
+.lock {
+    height: 50px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../images/lock.svg');
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.encryption_left .side_title {
+    font-size: 25pt;
+}
+.encryption_left hr {
+    margin-top: -15px;
+}
+.button_dark {
+    margin: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14pt;
+    padding: 10px 15px;
+    border: 4px solid #FFF;
+    position: relative;
+    bottom: -50px;
+    -webkit-transition: border 0.5s, font-size 0.5s;
+    -moz-transition: border 0.5s, font-size 0.5s;
+    -o-transition: border 0.5s, font-size 0.5s;
+    transition: border 0.5s, font-size 0.5s;
+}
+.button_dark:hover {
+    font-size: 14.1pt;
+    border: 4px solid #d3044a;
 }
 .encryption_right {
-    margin-left: -4px;
     padding-top: 80px;
 }
-@media screen and (max-width: 920px) {}
+.encryption_right .lock {
+    top: auto;
+    left: auto;
+    bottom: 10px;
+    right: 10px;
+}
+@media screen and (max-width: 920px) {
+    .encryption_left {
+        border-right: 2px solid rgba(0, 0, 0, 0);
+    }
+    .encryption_left .side_title {
+        font-size: 20pt;
+    }
+    .encryption_right {
+        border-left: 2px solid rgba(0, 0, 0, 0);
+    }
+}
 @media screen and (max-width: 640px) {
     .kerbal .full_width {
         margin-top: 20px;
@@ -47,12 +97,20 @@ html, body {
         width: 250px;
         margin-left: -125px;
     }
+    .encryption_left {
+        border-bottom: rgba(0, 0, 0, 0)
+    }
     .encryption_right {
-        margin-top: -4px;
-        margin-left: 0;
+        height: 400px;
+        padding-top: 0;
+    }
+    .lock {
+      display: none;
     }
 }
+
 /* - Media controls for kerbal section - */
+
 @media screen and (max-width: 455px) {
     .kerbal .equation {
         margin-top: 10px;

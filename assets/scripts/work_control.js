@@ -62,10 +62,7 @@ function events() {
         closeMenu();
     });
 
-    //Close menu if anything other than the menu is clicked
-    $('section').click(function() {
-        closeMenu();
-    });
+
 
     function openMenu() {
         //Open slide in menu

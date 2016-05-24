@@ -15,6 +15,7 @@ p {
 }
 a {
     color: #FFF;
+    outline: none;
     text-decoration: none;
     -webkit-transition: line-height 0.5s, color 0.5s, text-decoration 0.5s;
     -moz-transition: line-height 0.5s, color 0.5s, text-decoration 0.5s;
@@ -325,7 +326,7 @@ h1, h2 {
 .web .title_line_pink, .hobbyist_programmer .title_line_pink {
     margin-top: -10px;
 }
-.web p, .hobbyist_programmer p, .freelance p, .contact p {
+.web p, .hobbyist_programmer p, .freelance p, .contact p, .encryption_left p {
     max-width: 300px;
     display: block;
     margin: auto;
@@ -665,7 +666,7 @@ footer {
     .web, .hobbyist_programmer, .freelance {
         border-right: 2px solid #FFF;
     }
-    .image_processing, .teaching, .contact {
+    .image_processing, .teaching, .contact, .encryption_right {
         margin-left: -4.5px;
         border-left: 2px solid #FFF;
     }
@@ -765,7 +766,7 @@ footer {
         font-size: 14pt;
         padding: 10px 10%;
     }
-    .web p, .hobbyist_programmer p, .freelance p, .contact p {
+    .web p, .hobbyist_programmer p, .freelance p, .contact p, .encryption_left p {
         font-size: 14pt;
         max-width: 80%;
         text-align: center;
@@ -803,7 +804,6 @@ footer {
 }
 
 /* - Media controls for adaptive height in main nav bar - */
-
 @media screen and (max-height: 378px) and (min-width: 920px) {
     .main_nav svg {
         opacity: 0;
@@ -822,7 +822,6 @@ footer {
 }
 
 /* - Media controls for header_container and children - */
-
 @media screen and (min-width: 1500px) {
     h1 {
         font-size: 40pt;
@@ -855,7 +854,6 @@ footer {
 }
 
 /* - Media controls for about paragraph text - */
-
 @media screen and (max-width: 1350px) {
     .full_width {
         margin-top: 10px;
@@ -891,7 +889,6 @@ footer {
 }
 
 /* - Media controls for nodes - */
-
 @media screen and (max-width: 500px) {
     .nodes_left {
         left: -500px;
@@ -902,7 +899,6 @@ footer {
 }
 
 /* - Media controls for space gif - */
-
 @media screen and (max-width: 1100px) {
     .space .block_contain {
         width: 90%;
