@@ -525,7 +525,7 @@ h1, h2 {
     bottom: 10px;
     right: 10px;
 }
-.freelance p {
+.freelance p, .encryption_left p {
     text-align: right;
     margin-right: 20px;
 }
@@ -533,7 +533,7 @@ h1, h2 {
     text-align: left;
     margin-left: 20px;
 }
-.freelance .side_title {
+.freelance .side_title, .encryption_left .side_title {
     text-align: left;
     position: absolute;
     top: 2px;
@@ -553,7 +553,7 @@ h1, h2 {
 .contact a {
     color: #000;
 }
-.freelance hr {
+.freelance hr, .encryption_left hr {
     position: absolute;
     right: 20px;
     width: 75px;
@@ -565,7 +565,7 @@ h1, h2 {
     width: 150px;
     margin-top: -30px;
 }
-.freelance p, .contact p {
+.freelance p, .contact p{
     margin-top: -20px;
 }
 footer {
@@ -683,7 +683,7 @@ footer {
         max-width: 300px;
         text-align: center;
     }
-    .freelance p, .contact p {
+    .freelance p, .contact p, .encryption_left p {
         max-width: 270px;
     }
     .contain_img {
@@ -778,19 +778,19 @@ footer {
     .button_light {
         margin-top: -10px;
     }
-    .freelance .side_title, .contact .side_title {
+    .freelance .side_title, .contact .side_title, .encryption_left .side_title {
         left: 50%;
         margin: 10px 0 0 -120px;
         text-align: center;
     }
-    .freelance p, .contact p {
+    .freelance p, .contact p, .encryption_left p {
         margin: auto;
     }
     .contact .button_light {
         left: 50%;
         margin: 0 0 0 -57px;
     }
-    .freelance hr, .contact hr {
+    .freelance hr, .contact hr, .encryption_left hr {
         position: absolute;
         left: 50%;
         width: 100px;
