@@ -9,10 +9,10 @@ html, body {
     height: 600px;
     color: #000;
 }
-.kerbal h2 {
+.kerbal h2, .web_design h2 {
     color: #000;
 }
-.kerbal .full_width {
+.kerbal .full_width, .web_design .full_width {
     text-align: center;
     margin-top: 15px;
 }
@@ -34,7 +34,6 @@ html, body {
     background-size: cover;
     box-sizing: border-box;
 }
-.encryption_left {}
 .lock {
     height: 50px;
     width: 40px;
@@ -54,6 +53,9 @@ html, body {
 }
 .encryption_left p {
     margin-top: 70px;
+}
+.encryption_right {
+    margin-left: -4px;
 }
 .button_dark {
     margin: -20px 10px 10px 10px;
@@ -87,6 +89,59 @@ html, body {
     left: 10px;
     top: 70px;
 }
+.web_design {
+    height: 600px;
+    background-color: #a78798;
+    color: #000;
+}
+.contain_browser {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -300px;
+    overflow: hidden;
+}
+.browser {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+.browser_button {
+    height: 14.5px;
+    width: 14.5px;
+    border-radius: 100%;
+    position: absolute;
+    top: 4.5px;
+}
+.browser_button:first-child {
+    background-color: red;
+    left: 14px;
+}
+.browser_button:nth-child(2) {
+    background-color: #f7db6d;
+    left: 40px;
+}
+.browser_button:nth-child(3) {
+    background-color: #20a06f;
+    left: 66px;
+}
+.site {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 600px;
+    -webkit-transition: width 0.5s, transform 15s ease-in-out;
+    -moz-transition: width 0.5s, transform 15s ease-in-out;
+    -o-transition: width 0.5s, transform 15s ease-in-out;
+    transition: width 0.5s, transform 15s ease-in-out;
+}
+.medical {
+    height: 600px;
+    background-color: orange;
+}
 @media screen and (max-width: 920px) {
     .encryption_left {
         border-right: 2px solid rgba(0, 0, 0, 0);
@@ -117,7 +172,7 @@ html, body {
     }
     .encryption_left .button_dark {
         position: relative;
-        left:0px;
+        left: 0px;
         top: 40px;
     }
     .encryption_right {
@@ -135,6 +190,31 @@ html, body {
     }
     .lock {
         display: none;
+    }
+    .contain_browser {
+        margin-left: -150px;
+        height: 200px;
+    }
+    .browser {
+        height: 200px;
+    }
+    .contain_browser, .browser, .site {
+        width: 300px;
+    }
+    .browser_button {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    .contain_browser {
+        margin-left: -140px;
+        height: 180px;
+    }
+    .browser {
+        height: 180px;
+    }
+    .contain_browser, .browser, .site {
+        width: 280px;
     }
 }
 

@@ -19,7 +19,9 @@ $(document).ready(function() {
 
 function events() {
     //Function variables
-    isOpen = false;
+    var isOpen = false;
+    var atTop = true;
+    var completeSITE = false;
 
     //Smooth scroll to local a tags
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -47,6 +49,41 @@ function events() {
             }
         }
     });
+
+    $(window).scroll(function() {
+        var wScroll = $(this).scrollTop();
+
+        if (wScroll > 400 && completeSITE === false) {
+            window.setInterval(scrollSite, 1000);
+            completeSITE = true;
+        }
+    });
+
+    //Move site image up and down in browser
+    function scrollSite() {
+        if (atTop === true) {
+            $('.site').css({
+                "transform": "translate3d(0, -" + ($('.site').prop('scrollHeight') - $('.browser').prop('scrollHeight')) + "px, 0)"
+            });
+
+            //Wait for animation to complete before changing variable value
+            $('.site').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+                function(e) {
+                    atTop = false;
+                });
+        } else {
+            $('.site').css({
+                "transform": "translate3d(0, 0, 0)"
+            });
+
+            //Wait for animation to complete before changing variable value
+            $('.site').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
+                function(e) {
+                    atTop = true;
+                });
+        }
+    }
+
 
     //Open / Close slide in menu
     $('.menu_open').click(function() {
