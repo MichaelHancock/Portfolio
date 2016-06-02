@@ -326,7 +326,7 @@ h1, h2 {
 .web .title_line_pink, .hobbyist_programmer .title_line_pink {
     margin-top: -10px;
 }
-.web p, .hobbyist_programmer p, .freelance p, .contact p, .encryption_left p {
+.web p, .hobbyist_programmer p, .freelance p, .contact p, .encryption_left p, .medical_left p {
     max-width: 300px;
     display: block;
     margin: auto;
@@ -430,11 +430,11 @@ h1, h2 {
     -o-transition: width 0.5s, height 0.5s;
     transition: width 0.5s, height 0.5s;
 }
-.space .rocket:nth-child(2), .kerbal .rocket:nth-child(1) {
+.space .rocket:nth-child(2), .kerbal .rocket:nth-child(2) {
     top: 50px;
     left: -50px;
 }
-.space .rocket:nth-child(3), .kerbal .rocket:nth-child(2) {
+.space .rocket:nth-child(3), .kerbal .rocket:nth-child(3) {
     right: 50px;
     bottom: -50px;
 }
@@ -525,7 +525,7 @@ h1, h2 {
     bottom: 10px;
     right: 10px;
 }
-.freelance p, .encryption_left p {
+.freelance p, .encryption_left p, .medical_left p {
     text-align: right;
     margin-right: 20px;
 }
@@ -533,7 +533,7 @@ h1, h2 {
     text-align: left;
     margin-left: 20px;
 }
-.freelance .side_title, .encryption_left .side_title {
+.freelance .side_title, .encryption_left .side_title, .medical_left .side_title {
     text-align: left;
     position: absolute;
     top: 2px;
@@ -553,7 +553,7 @@ h1, h2 {
 .contact a {
     color: #000;
 }
-.freelance hr, .encryption_left hr {
+.freelance hr, .encryption_left hr, .medical_left hr {
     position: absolute;
     right: 20px;
     width: 75px;
@@ -683,7 +683,7 @@ footer {
         max-width: 300px;
         text-align: center;
     }
-    .freelance p, .contact p, .encryption_left p {
+    .freelance p, .contact p, .encryption_left p, .medical_left p {
         max-width: 270px;
     }
     .contain_img {
@@ -750,8 +750,8 @@ footer {
     .double {
         width: 100%;
         display: block;
-        border-right: 0;
-        border-left: 0;
+        border-right: none;
+        border-left: none;
         margin: 0;
     }
     .side_title {
@@ -766,7 +766,7 @@ footer {
         font-size: 14pt;
         padding: 10px 10%;
     }
-    .web p, .hobbyist_programmer p, .freelance p, .contact p, .encryption_left p {
+    .web p, .hobbyist_programmer p, .freelance p, .contact p, .encryption_left p, .medical_left p {
         font-size: 14pt;
         max-width: 80%;
         text-align: center;
@@ -779,19 +779,19 @@ footer {
     .button_light {
         margin-top: -10px;
     }
-    .freelance .side_title, .contact .side_title, .encryption_left .side_title {
+    .freelance .side_title, .contact .side_title, .encryption_left .side_title, .medical_left .side_title {
         left: 50%;
         margin: 10px 0 0 -120px;
         text-align: center;
     }
-    .freelance p, .contact p, .encryption_left p {
+    .freelance p, .contact p, .encryption_left p, .medical_left p {
         margin: auto;
     }
     .contact .button_light {
         left: 50%;
         margin: 0 0 0 -57px;
     }
-    .freelance hr, .contact hr, .encryption_left hr {
+    .freelance hr, .contact hr, .encryption_left hr, .medical_left hr {
         position: absolute;
         left: 50%;
         width: 100px;

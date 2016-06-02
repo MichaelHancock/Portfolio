@@ -25,9 +25,9 @@
     <div class="slide_in">
         <ul>
             <li><a href="index.html">About</a></li>
-            <li><a href="#ksp_section">KSP</a></li>
+            <li><a href="#kerbal_section">KSP</a></li>
             <li><a href="#encryption_section">Encryption</a></li>
-            <li><a href="#website_section">Web Design</a></li>
+            <li><a href="#web_section">Web Design</a></li>
             <li><a href="#imaging_section">Medical Imaging</a></li>
         </ul>
     </div>
@@ -48,9 +48,9 @@
         <!-- Navigation links -->
         <ul>
             <li><a href="index.html">About</a></li>
-            <li><a href="#ksp_section">KSP</a></li>
+            <li><a href="#kerbal_section">KSP</a></li>
             <li><a href="#encryption_section">Encryption</a></li>
-            <li><a href="#website_section">Web Design</a></li>
+            <li><a href="#web_section">Web Design</a></li>
             <li><a href="#imaging_section">Medical Imaging</a></li>
         </ul>
 
@@ -66,6 +66,9 @@
 
     <!-- KSP -->
     <section class="kerbal">
+        <!-- Target section link -->
+        <a class="target_link" id="kerbal_section"></a>
+
         <!-- Fly in robot div -->
         <div class="rocket"></div>
         <div class="rocket"></div>
@@ -91,6 +94,10 @@
 
     <!-- Encryption - double section appears as one section -->
     <section class="double encryption_left">
+
+        <!-- Target section link -->
+        <a class="target_link" id="encryption_section"></a>
+
         <!-- Lock and key svg -->
         <div class="lock"></div>
 
@@ -101,8 +108,8 @@
 
         <!-- Half width text -->
         <p>
-          I developed a bespoke multi-stage plain text encryption system. Here characters are converted into ASCII numbers before revisable mathematical operations are performed on the text. As long as two users know the key, they can encrypt, send and
-          decrypt secret messages.
+            I developed a bespoke multi-stage plain text encryption system. Here characters are converted into ASCII numbers before revisable mathematical operations are performed on the text. As long as two users know the key, they can encrypt, send and decrypt
+            secret messages.
         </p>
 
         <!-- Image link to github -->
@@ -117,6 +124,8 @@
 
     <!-- Web section -->
     <section class="web_design">
+        <!-- Target section link -->
+        <a class="target_link" id="web_section"></a>
 
         <!-- Section title -->
         <div class="title_container">
@@ -141,6 +150,37 @@
             <img src="assets/images/website.png" class="site">
         </div>
     </section>
+
+    <!-- Medical section - double section appears as one section -->
+    <section class="double medical_left">
+        <!-- Target section link -->
+        <a class="target_link" id="imaging_section"></a>
+
+        <!-- Section title -->
+        <h2 class="side_title">Medical Imaging</h2>
+        <hr class="title_line_pink" />
+        <br />
+
+        <!-- Half width text -->
+        <p>To speed classification of human neoplasms, I developed an OpenCV program to calculate the proliferation index of cells in a medical image. In a three step process of filtering, segmentation and then counting, the program could quickly and accurately
+            tell the user if a tumour was likely malignant or benign.</p>
+
+        <!-- Image link to github -->
+        <a href="https://github.com/MichaelHancock/Automatic-Detection-of-Proliferation-Index">
+            <div class="button_dark">See the Code!</div>
+        </a>
+    </section>
+    <section class="double medical_right">
+
+        <!-- Medical imaging gif -->
+        <img src="assets/images/imaging.gif">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <small>&copy; 2016 Michael Hancock, All rights reserved.</small>
+    </footer>
+
 
     <!-- No script overides -->
     <noscript>
