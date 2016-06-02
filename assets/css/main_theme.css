@@ -565,7 +565,7 @@ h1, h2 {
     width: 150px;
     margin-top: -30px;
 }
-.freelance p, .contact p{
+.freelance p, .contact p {
     margin-top: -20px;
 }
 footer {
@@ -666,7 +666,7 @@ footer {
     .web, .hobbyist_programmer, .freelance {
         border-right: 2px solid #FFF;
     }
-    .image_processing, .teaching, .contact, .encryption_right {
+    .image_processing, .teaching, .contact {
         margin-left: -4.5px;
         border-left: 2px solid #FFF;
     }
@@ -770,6 +770,7 @@ footer {
         font-size: 14pt;
         max-width: 80%;
         text-align: center;
+        margin: auto;
     }
     .rocket {
         height: 25px;
