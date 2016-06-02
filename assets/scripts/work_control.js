@@ -22,6 +22,8 @@ function events() {
     var isOpen = false;
     var atTop = true;
     var completeSITE = false;
+    var completeHR = false;
+    var buttonCOUNT = 0;
 
     //Smooth scroll to local a tags
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -53,9 +55,20 @@ function events() {
     $(window).scroll(function() {
         var wScroll = $(this).scrollTop();
 
-        if (wScroll > 400 && completeSITE === false) {
+        if (($('.web_design').offset().top - $(window).scrollTop()) < wScroll && completeSITE === false) {
             window.setInterval(scrollSite, 1000);
+            window.setInterval(showButtons, 500);
             completeSITE = true;
+
+            //Grow hr after scroll begins
+            if (completeHR === false) {
+                $('.growable_line').fadeTo('fast', 1);
+                $('.growable_line').animate({
+                    'width': '+=100px'
+                }, 2000);
+
+                completeHR = true;
+            }
         }
     });
 
@@ -84,6 +97,23 @@ function events() {
         }
     }
 
+    //Fade in browser control buttons
+    function showButtons() {
+        switch (buttonCOUNT) {
+            case 0:
+                $('.browser_button:first-child').fadeTo('slow', 1);
+                buttonCOUNT++;
+                break;
+            case 1:
+                $('.browser_button:nth-child(2)').fadeTo('slow', 1);
+                buttonCOUNT++;
+                break;
+            default:
+                $('.browser_button:nth-child(3)').fadeTo('slow', 1);
+                buttonCOUNT++;
+                break;
+        }
+    }
 
     //Open / Close slide in menu
     $('.menu_open').click(function() {
