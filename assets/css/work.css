@@ -196,6 +196,9 @@ html, body {
         border-left: 2px solid rgba(1, 1, 1, 0);
         margin-left: -4.5px;
     }
+    .medical_left .button_dark {
+        bottom: 35px;
+    }
 }
 @media screen and (max-width: 640px) {
     .kerbal .full_width {
