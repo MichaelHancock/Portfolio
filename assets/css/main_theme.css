@@ -10,6 +10,7 @@ nav {
     width: 135px;
     position: fixed;
     background-color: #FFF;
+    box-shadow: 0px 5px 5px #aaa;
 }
 nav svg {
     left: 50%;
@@ -29,7 +30,14 @@ nav ul {
 nav ul li {
 		line-height: 35px;
 }
-
+.hero {
+  background-image: url('../images/hero.png');
+  background-size: cover;
+  height: 500px;
+  width: calc(100% - 135px);
+  position: relative;
+  left: 135px;
+}
 @media screen and (max-width: 920px) {
   nav {
     height: 70px;
@@ -44,5 +52,11 @@ nav ul li {
   }
   nav ul {
   	display: none;
+  }
+  .hero {
+    top: 70px;
+    left: -250px;
+    background-position: left;
+    width: calc(100% + 250px);
   }
 }
