@@ -38,6 +38,7 @@ nav ul li {
   position: relative;
   left: 135px;
 }
+
 @media screen and (max-width: 920px) {
   nav {
     height: 70px;
