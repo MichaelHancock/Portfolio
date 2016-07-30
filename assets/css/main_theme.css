@@ -38,26 +38,20 @@ nav ul li {
   position: relative;
   left: 135px;
 }
-
 @media screen and (max-width: 920px) {
   nav {
     height: 70px;
     width: 100%;
     box-shadow: 5px 0 5px #aaa;
   }
-  nav svg {
-    left: 5px;
-    top: 10px;
-    height: 50px;
-    margin: 0;
-  }
-  nav ul {
+  nav ul, nav svg {
   	display: none;
   }
   .hero {
     top: 70px;
-    left: -250px;
+    left: -200px;
     background-position: left;
-    width: calc(100% + 250px);
+    width: calc(100% + 200px);
+    height: 400px;
   }
 }
