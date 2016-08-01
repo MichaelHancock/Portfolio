@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"outFile": "./assets/scripts/main_control.js",
+		"sourceMap": true
+	},
+	"files": [
+		"./assets/scripts/main_control.ts"
+	],
+	"compileOnSave": true,
+	"compilerOptions": {
+		"noImplicitAny": true
+	}
+}
