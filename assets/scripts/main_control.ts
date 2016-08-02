@@ -1,57 +1,3 @@
-$(document).ready(() => {
-    let nodeID: number = 0
-    let imageID: number = 0
-    let lineID: number = 0
-
-	  returnToTop()
-	  animateHeaderDecortation()
-
-    const pulseNode = () => {
-        let width: number = $(window).width()
-
-        if (width > 410) {
-
-            nodeID++
-
-            if (nodeID === 1) {
-                $('.nodes_left:nth-child(4)').fadeTo('fast', 1)
-                $('.nodes_right:nth-child(7)').fadeTo('fast', 1)
-                $('.nodes_left:nth-child(6)').fadeTo('fast', 0)
-                $('.nodes_right:nth-child(9)').fadeTo('fast', 0)
-            } else if (nodeID === 2) {
-                $('.nodes_left:nth-child(5)').fadeTo('fast', 1)
-                $('.nodes_right:nth-child(8)').fadeTo('fast', 1)
-                $('.nodes_left:nth-child(4)').fadeTo('fast', 0)
-                $('.nodes_right:nth-child(7)').fadeTo('fast', 0)
-            } else {
-                $('.nodes_left:nth-child(6)').fadeTo('fast', 1)
-                $('.nodes_right:nth-child(9)').fadeTo('fast', 1)
-                $('.nodes_left:nth-child(5)').fadeTo('fast', 0)
-                $('.nodes_right:nth-child(8)').fadeTo('fast', 0)
-                nodeID = 0
-            }
-        }
-    }
-
-    const pulseCells = () => {
-        imageID++
-
-        if (imageID === 1) {
-            $('.swappable:nth-child(2)').fadeTo(2000, 1)
-            $('.swappable:nth-child(3)').fadeTo(2000, 0)
-        } else if (imageID === 2) {
-            $('.swappable:nth-child(3)').fadeTo(2000, 1)
-            $('.swappable:nth-child(2)').fadeTo(2000, 0)
-            imageID = 0
-        }
-    }
-
-    setInterval(pulseNode, 2000)
-    setInterval(pulseCells, 5000)
-    animateMenu()
-    events()
-})
-
 const events = () => {
     let isOpen: boolean = false
     let wScroll: number = 0
@@ -191,12 +137,66 @@ const animateMenu = () => {
 }
 
 const returnToTop = () => {
-	if ($(document).scrollTop() > 0)
+    if ($(document).scrollTop() > 0)
         window.scrollTo(0, 0)
 }
 
 const animateHeaderDecortation = () => {
-	 $('.header_container hr').animate({
+    $('.header_container hr').animate({
         'width': '+=100%'
-     }, 2000)
+    }, 2000)
 }
+
+const pulseCells = () => {
+    let imageID: number = 0
+
+    setInterval(() => {
+        imageID++
+
+        if (imageID === 1) {
+            $('.swappable:nth-child(2)').fadeTo(2000, 1)
+            $('.swappable:nth-child(3)').fadeTo(2000, 0)
+        } else if (imageID === 2) {
+            $('.swappable:nth-child(3)').fadeTo(2000, 1)
+            $('.swappable:nth-child(2)').fadeTo(2000, 0)
+            imageID = 0
+        }
+    }, 5000)
+}
+
+const pulseNode = () => {
+    let width: number = $(window).width()
+    let nodeID: number = 0
+
+    setInterval(() => {
+        if (width > 410) {
+            nodeID++
+            if (nodeID === 1) {
+                $('.nodes_left:nth-child(4)').fadeTo('fast', 1)
+                $('.nodes_right:nth-child(7)').fadeTo('fast', 1)
+                $('.nodes_left:nth-child(6)').fadeTo('fast', 0)
+                $('.nodes_right:nth-child(9)').fadeTo('fast', 0)
+            } else if (nodeID === 2) {
+                $('.nodes_left:nth-child(5)').fadeTo('fast', 1)
+                $('.nodes_right:nth-child(8)').fadeTo('fast', 1)
+                $('.nodes_left:nth-child(4)').fadeTo('fast', 0)
+                $('.nodes_right:nth-child(7)').fadeTo('fast', 0)
+            } else {
+                $('.nodes_left:nth-child(6)').fadeTo('fast', 1)
+                $('.nodes_right:nth-child(9)').fadeTo('fast', 1)
+                $('.nodes_left:nth-child(5)').fadeTo('fast', 0)
+                $('.nodes_right:nth-child(8)').fadeTo('fast', 0)
+                nodeID = 0
+            }
+        }
+    }, 2000)
+}
+
+$(document).ready(() => {
+    returnToTop()
+    animateHeaderDecortation()
+    pulseNode()
+    pulseCells()
+    animateMenu()
+    events()
+})
