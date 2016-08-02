@@ -8,7 +8,8 @@
 		"sourceMap": true
 	},
 	"files": [
-		"./assets/scripts/main_control.ts"
+		"./assets/scripts/main_control.ts",
+		"C:/jQuery/jquery.d.ts" 
 	],
 	"compileOnSave": true,
 	"compilerOptions": {
