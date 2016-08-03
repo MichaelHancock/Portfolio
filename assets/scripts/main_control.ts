@@ -5,30 +5,19 @@ const events = () => {
     let completeSCREEN: boolean = false
     let completeROCKET: boolean = false
 
-    $('a[href*="#"]:not([href="#"])').click(() => {
-
-        if (isOpen === true) {
-            $(".main_nav").animate({
-                'margin-top': '-=210px'
-            }, 400)
-            $(".slide_in").animate({
-                'margin-top': '-=245px'
-            }, 400)
-
-            isOpen = false
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash)
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000)
+          return false
         }
-
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            let target = $(this.hash)
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000)
-                return false
-            }
-        }
+      }
     })
+
 
     $(window).scroll(() => {
         let wScroll: number = $(this).scrollTop()
