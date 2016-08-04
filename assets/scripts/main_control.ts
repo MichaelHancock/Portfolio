@@ -1,23 +1,11 @@
 const events = () => {
-    let isOpen: boolean = false
+    let menuIsOpen: boolean = false
     let wScroll: number = 0
     let completeHR: boolean = false
     let completeSCREEN: boolean = false
     let completeROCKET: boolean = false
 
-    $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash)
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000)
-          return false
-        }
-      }
-    })
-
+    $('a[href*="#"]:not([href="#"])').click(smoothScroll)
 
     $(window).scroll(() => {
         let wScroll: number = $(this).scrollTop()
@@ -70,45 +58,52 @@ const events = () => {
     })
 
     $('.main_nav .menu_open').click(() => {
-
-        if (isOpen === false) {
-            openMenu()
-        } else {
-            closeMenu()
-        }
+        menuIsOpen = menuIsOpen === false ? manageMenuState(menuIsOpen) : manageMenuState(menuIsOpen)
     })
 
     $(window).resize(() => {
-        closeMenu()
+        if ($(window).width() > 920 && menuIsOpen) {
+            manageMenuState(true)
+            menuIsOpen = false
+        }
     })
 
     $('section').click(() => {
-        closeMenu()
+        menuIsOpen = manageMenuState(menuIsOpen)
     })
+}
 
-    const openMenu = () => {
-        if (isOpen === false) {
-            $(".main_nav").animate({
-                'margin-top': '+=210px'
-            }, 400)
-            $(".slide_in").animate({
-                'margin-top': '+=245px'
-            }, 400)
+const manageMenuState = (menuIsOpen: boolean): boolean => {
+    if (menuIsOpen === false) {
+        $(".main_nav").animate({
+            'margin-top': '+=210px'
+        }, 400)
+        $(".slide_in").animate({
+            'margin-top': '+=245px'
+        }, 400)
 
-            isOpen = true
-        }
+        return true
+    } else if (menuIsOpen === true) {
+        $(".main_nav").animate({
+            'margin-top': '-=210px'
+        }, 400)
+        $(".slide_in").animate({
+            'margin-top': '-=245px'
+        }, 400)
+
+        return false
     }
+}
 
-    const closeMenu = () => {
-        if (isOpen === true) {
-            $(".main_nav").animate({
-                'margin-top': '-=210px'
-            }, 400)
-            $(".slide_in").animate({
-                'margin-top': '-=245px'
-            }, 400)
-
-            isOpen = false
+const smoothScroll = function(): boolean {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        let target = $(this.hash)
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000)
+            return false
         }
     }
 }
