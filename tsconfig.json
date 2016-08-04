@@ -9,7 +9,7 @@
 	},
 	"files": [
 		"./assets/scripts/main_control.ts",
-		"C:/jQuery/jquery.d.ts" 
+		"C:/jQuery/jquery.d.ts"
 	],
 	"compileOnSave": true,
 	"compilerOptions": {

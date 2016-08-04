@@ -1,18 +1,18 @@
-const events = () => {
+const workEvents = () => {
     let atTop: boolean = true
-    let completeSITE: boolean = false
+    let completeSite: boolean = false
     let completeHR: boolean = false
-    let buttonCOUNT: number = 0
+    let buttonCount: number = 0
 
     $(window).scroll(() => {
-        var wScroll = $(this).scrollTop()
+        let wScroll: number = $(this).scrollTop()
 
-        if (($('.web_design').offset().top - $(window).scrollTop()) < wScroll && completeSITE === false) {
+        if (($('.web_design').offset().top - $(window).scrollTop()) < wScroll && completeSite === false) {
             window.setInterval(scrollSite, 1000)
             window.setInterval(showButtons, 500)
-            completeSITE = true
+            completeSite = true
 
-            if (completeHR === false) {
+            if (!completeHR) {
                 $('.growable_line').fadeTo('fast', 1)
                 $('.growable_line').animate({
                     'width': '+=100px'
@@ -24,40 +24,34 @@ const events = () => {
     })
 
     const scrollSite = () => {
-        if (atTop === true) {
+        if (atTop) {
             $('.site').css({
                 "transform": "translate3d(0, -" + ($('.site').prop('scrollHeight') - $('.browser').prop('scrollHeight')) + "px, 0)"
             })
 
-            $('.site').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-                function(e) {
-                    atTop = false
-                })
+            $('.site').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => atTop = false)
         } else {
             $('.site').css({
                 "transform": "translate3d(0, 0, 0)"
             })
 
-            $('.site').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',
-                function(e) {
-                    atTop = true
-                })
+            $('.site').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', () => atTop = true)
         }
     }
 
     const showButtons = () => {
-        switch (buttonCOUNT) {
+        switch (buttonCount) {
             case 0:
                 $('.browser_button:first-child').fadeTo('slow', 1)
-                buttonCOUNT++
+                buttonCount++
                 break
             case 1:
                 $('.browser_button:nth-child(2)').fadeTo('slow', 1)
-                buttonCOUNT++
+                buttonCount++
                 break
             default:
                 $('.browser_button:nth-child(3)').fadeTo('slow', 1)
-                buttonCOUNT++
+                buttonCount++
                 break
         }
     }
@@ -76,5 +70,5 @@ const animateRockets = () => {
 
 $(document).ready(() => {
     animateRockets()
-    events()
+    workEvents()
 })
