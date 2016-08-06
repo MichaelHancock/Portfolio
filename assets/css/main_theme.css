@@ -37,10 +37,6 @@ section {
     width: -moz-calc(100% - 135px);
     width: -o-calc(100% - 135px);
     width: calc(100% - 135px);
-    -webkit-transition: width 0.5s, height .5s;
-    -moz-transition: width 0.5s, height .5s;
-    -o-transition: width 0.5s, height .5s;
-    transition: width 0.5s, height .5s
 }
 hr {
     -webkit-transition: margin 0.5s, opacity 0.5s, display .5s;
@@ -127,10 +123,6 @@ img {
 .hero {
     height: 500px;
     background-image: url(../images/hero.png);
-    -webkit-transition: background-position 0.5s, left .5s;
-    -moz-transition: background-position 0.5s, left .5s;
-    -o-transition: background-position 0.5s, left .5s;
-    transition: background-position 0.5s, left .5s
 }
 .header_container {
     position: absolute;

@@ -1,16 +1,14 @@
 const workEvents = () => {
-    let atTop: boolean = true
     let completeSite: boolean = false
     let completeHR: boolean = false
-    let buttonCount: number = 0
 
     $(window).scroll(() => {
         let wScroll: number = $(this).scrollTop()
 
         if (($('.web_design').offset().top - $(window).scrollTop()) < wScroll && completeSite === false) {
-            window.setInterval(scrollSite, 1000)
-            window.setInterval(showButtons, 500)
             completeSite = true
+            scrollSite()
+            showButtons()
 
             if (!completeHR) {
                 $('.growable_line').fadeTo('fast', 1)
@@ -22,8 +20,10 @@ const workEvents = () => {
             }
         }
     })
+}
 
-    const scrollSite = () => {
+const scrollSite = () => {
+    const pulse = () => {
         if (atTop) {
             $('.site').css({
                 "transform": "translate3d(0, -" + ($('.site').prop('scrollHeight') - $('.browser').prop('scrollHeight')) + "px, 0)"
@@ -39,7 +39,12 @@ const workEvents = () => {
         }
     }
 
-    const showButtons = () => {
+    let atTop: boolean = true
+    setInterval(pulse, 1000)
+}
+
+const showButtons = () => {
+    const pulse = () => {
         switch (buttonCount) {
             case 0:
                 $('.browser_button:first-child').fadeTo('slow', 1)
@@ -51,10 +56,13 @@ const workEvents = () => {
                 break
             default:
                 $('.browser_button:nth-child(3)').fadeTo('slow', 1)
-                buttonCount++
+                clearInterval(interval)
                 break
         }
     }
+
+    let buttonCount: number = 0
+    const interval = setInterval(pulse, 500)
 }
 
 const animateRockets = () => {

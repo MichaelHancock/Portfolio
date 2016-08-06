@@ -48,13 +48,15 @@ const events = () => {
             completeROCKET = true
         }
 
-        $('.gear').css({
-            'transition': 'transform 1s ease-out',
-            '-webkit-transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
-            '-moz-transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
-            '-ms-transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
-            'transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
-        })
+        if (wScroll < 900) {
+            $('.gear').css({
+                'transition': 'transform 1s ease-out',
+                '-webkit-transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
+                '-moz-transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
+                '-ms-transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
+                'transform': 'rotate(' + Math.round(wScroll / 2.5) + 'deg)',
+            })
+        }
     })
 
     $('.main_nav .menu_open').click(() => {
@@ -69,7 +71,7 @@ const events = () => {
     })
 
     $('section').click(() => {
-        menuIsOpen = manageMenuState(menuIsOpen)
+        menuIsOpen ? manageMenuState(menuIsOpen) : menuIsOpen
     })
 }
 
