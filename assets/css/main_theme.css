@@ -107,7 +107,13 @@ img {
 }
 .main_nav ul li a:hover {
     color: #333;
-    text-decoration: underline
+    text-decoration: underline;
+}
+.main_nav ul hr {
+    border: 1px solid #ddd;
+    width: 50%;
+    position: relative;
+    right: -28px;
 }
 .menu_open {
     display: none
