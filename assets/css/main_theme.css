@@ -558,7 +558,7 @@ h1, h2 {
     margin-top: -30px
 }
 .freelance p, .contact p {
-    margin-top: -20px
+    margin-top: 60px;
 }
 footer {
     display: block;
@@ -778,6 +778,9 @@ footer {
     }
     .freelance p, .contact p, .encryption_left p, .medical_left p {
         margin: auto
+    }
+    .freelance p, .contact p {
+        margin-top: 60px;
     }
     .contact .button_light {
         left: 50%;
