@@ -6,8 +6,8 @@ html, body {
 }
 .kerbal {
     background-color: #a78798;
-    height: 600px;
-    color: #000
+    color: #000;
+    height: auto;
 }
 .kerbal h2, .web_design h2 {
     color: #000;
@@ -17,18 +17,10 @@ html, body {
     text-align: center;
     margin-top: 15px
 }
-.kerbal .equation {
-    width: 300px;
-    display: block;
-    position: relative;
-    left: 50%;
-    margin: -15px 0 35px -150px;
-    border: none
-}
 .kerbal img {
-    margin: 0;
+    margin: 0 0 40px 0;
     width: 400px;
-    border: 1px solid #333
+    border: 1px solid #333;
 }
 .encryption_left, .encryption_right {
     box-sizing: border-box;
@@ -89,7 +81,7 @@ html, body {
     top: 70px
 }
 .web_design {
-    height: 600px;
+    height: auto;
     background-color: #a78798;
     color: #000
 }
@@ -99,13 +91,21 @@ html, body {
     top: -20px;
     z-index: -10
 }
+.scrolling_webpage {
+    position: relative;
+    display: inline-block;
+    width: 600px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -50px;
+    overflow: hidden;
+}
 .contain_browser {
     width: 600px;
     height: 300px;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    margin-left: -300px;
     overflow: hidden
 }
 .browser {
@@ -186,9 +186,6 @@ html, body {
         border-left: 2px solid rgba(1, 1, 1, 0);
         margin-left: -4.5px
     }
-    .web_design .growable_line {
-        top: -10px
-    }
     .medical_left {
         border-right: 2px solid rgba(1, 1, 1, 0)
     }
@@ -203,10 +200,6 @@ html, body {
 @media screen and (max-width: 640px) {
     .kerbal .full_width {
         margin-top: 20px
-    }
-    .kerbal .equation {
-        width: 250px;
-        margin-left: -125px
     }
     .encryption_left, .medical_left {
         border-bottom: rgba(0, 0, 0, 0)
@@ -232,14 +225,10 @@ html, body {
     .lock {
         display: none
     }
-    .contain_browser {
-        margin-left: -150px;
+    .scrolling_webpage, .contain_browser, .browser {
         height: 200px
     }
-    .browser {
-        height: 200px
-    }
-    .contain_browser, .browser, .site {
+    .scrolling_webpage, .contain_browser, .browser, .site {
         width: 300px
     }
     .browser_button:first-child, .browser_button:nth-child(2), .browser_button:nth-child(3) {
@@ -257,8 +246,8 @@ html, body {
     }
     .medical_right {
         margin-left: 0;
-        height: 320px;
-        margin-top: -50px
+        height: 280px;
+        margin-top: -120px
     }
     .medical_right img {
         top: 0;
@@ -268,15 +257,12 @@ html, body {
     }
 }
 @media screen and (max-width: 320px) {
-    .contain_browser {
-        margin-left: -140px;
-        height: 180px
-    }
-    .browser {
-        height: 180px
-    }
-    .contain_browser, .browser, .site {
+    .scrolling_webpage, .contain_browser, .browser {
+        height: 180px;
         width: 280px
+    }
+    .site {
+        width: 290px;
     }
     .medical_right img {
         width: 280px;
@@ -284,10 +270,6 @@ html, body {
     }
 }
 @media screen and (max-width: 455px) {
-    .kerbal .equation {
-        margin-top: 10px;
-        margin-bottom: 40px
-    }
     .kerbal img {
         width: 80%
     }
