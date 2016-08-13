@@ -7,6 +7,10 @@ const events = () => {
 
     $('a[href*="#"]:not([href="#"])').click(smoothScroll)
 
+    $('.slide_in ul li a').click(() => {
+        menuIsOpen = manageMenuState(true)
+    })
+
     $(window).scroll(() => {
         let wScroll: number = $(this).scrollTop()
         let screenTRIGGER: number = 900
