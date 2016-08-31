@@ -413,7 +413,26 @@ h1, h2 {
     background: linear-gradient(to bottom, rgba(0, 0, 0, .65) 49%, rgba(0, 0, 0, .56) 56%, rgba(0, 0, 0, 0) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
 }
+.button_light {
+    font-size: 14pt;
+    position: relative;
+    bottom: -50px;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    -webkit-transition: background-color .5s, color .5s;
+    -moz-transition: background-color .5s, color .5s;
+    -o-transition: background-color .5s, color .5s;
+    transition: background-color .5s, color .5s;
+    border: 4px solid #000;
+}
+.button_light:hover {
+    color: #fff;
+    background-color: #333;
+}
 .space {
+    height: auto;
     color: #000;
     background-color: #a78798;
 }
@@ -436,10 +455,6 @@ h1, h2 {
     right: 50px;
     bottom: -50px;
 }
-.space .block_contain {
-    height: 230px;
-    margin: 20px 0 0 -319px;
-}
 .space a {
     font-size: 14pt;
     text-decoration: underline;
@@ -448,26 +463,40 @@ h1, h2 {
 .space img {
     box-sizing: border-box;
     height: 230px;
-    margin-right: -490px;
     border: 3px solid #333;
 }
-.button_light {
-    font-size: 14pt;
-    position: relative;
-    bottom: -50px;
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 15px;
-    cursor: pointer;
-    -webkit-transition: background-color .5s, color .5s;
-    -moz-transition: background-color .5s, color .5s;
-    -o-transition: background-color .5s, color .5s;
-    transition: background-color .5s, color .5s;
-    border: 4px solid #000;
+.space .button_light {
+    bottom: 0;
+    left: calc(50% - 69.5px);
+    display: block;
+    width: 80px;
+    margin: 0;
+    margin-bottom: 20px;
 }
-.button_light:hover {
-    color: #fff;
-    background-color: #333;
+.compound_contain {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+}
+.compound_contain .left {
+    display: inline-block;
+    width: 500px;
+}
+.compound_contain .right {
+    display: inline-block;
+    width: 500px;
+    vertical-align: top;
+}
+.space .compound_contain {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.space .compound_contain .left p {
+    margin: 0;
+    padding-right: 8px;
+    padding-left: 100px;
+    text-align: right;
+    vertical-align: middle;
 }
 .space a:hover {
     color: #333;
@@ -891,21 +920,41 @@ footer {
         right: -500px;
     }
 }
-@media screen and (max-width: 1100px) {
-    .space .block_contain {
-        width: 90%;
+@media screen and (max-width: 1300px) {
+    .space .compound_contain .right img {
+        width: 55%;
         height: auto;
-        margin: 20px 0 0;
+        margin-top: 20px;
     }
-    .space .vertical_seperate, .space img {
-        display: none;
+    .space .compound_contain {
+        width: 80%;
+        margin-top: 10px;
+        margin-bottom: 30px;
     }
-    .space .block_contain p {
-        font-size: 14pt;
-        text-align: center;
+    .space .compound_contain .left, .space .compound_contain .right {
+        display: block;
+        width: 100%;
+    }
+    .space .compound_contain .left p {
+        padding: 0;
         text-align: center;
     }
     .space .button_light {
-        bottom: -25px;
+        display: none;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .space .compound_contain .right img {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 840px) {
+    .space .compound_contain .right img {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .space .compound_contain .right img {
+        width: 100%;
     }
 }
