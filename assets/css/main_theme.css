@@ -469,7 +469,7 @@ h1, h2 {
     bottom: 0;
     left: calc(50% - 69.5px);
     display: block;
-    width: 80px;
+    width: 90px;
     margin: 0;
     margin-bottom: 20px;
 }
@@ -497,6 +497,9 @@ h1, h2 {
     padding-left: 100px;
     text-align: right;
     vertical-align: middle;
+}
+.space a {
+    text-decoration: none;
 }
 .space a:hover {
     color: #333;
