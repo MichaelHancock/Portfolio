@@ -1,2 +1,4 @@
 # Portfolio
-Personal portfolio website to demonstrate my work, skills and interests. Design shall be responsive and should work even if user has noscript active. V2.0. Current version is live at http://hancockdeveloper.co.uk.
+Portfolio website to demonstrate my work, skills and interests. Now very out of date!
+
+It is not properly hosted but the 2016 version of the site can still be found on [GitHub pages](https://michaelhancock.github.io/Portfolio/).
