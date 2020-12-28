@@ -1,0 +1,300 @@
+html, body {
+    background-image: url(../images/background.png);
+}
+.main_nav a {
+    font-size: 11.4pt;
+}
+.kerbal {
+    height: auto;
+    color: #000;
+    background-color: #a78798;
+}
+.kerbal h2, .web_design h2 {
+    margin-bottom: 5px;
+    color: #000;
+}
+.kerbal .full_width, .web_design .full_width {
+    margin-top: 15px;
+    text-align: center;
+}
+.kerbal img {
+    width: 400px;
+    margin: 0 0 40px 0;
+    border: 1px solid #333;
+}
+.encryption_left, .encryption_right {
+    box-sizing: border-box;
+    border-bottom: 4px solid #333;
+}
+.lock {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 50px;
+    background-image: url(../images/lock.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.encryption_left .side_title {
+    font-size: 25pt;
+}
+.encryption_left hr {
+    width: 100px;
+    margin-top: 65px;
+}
+.encryption_left p {
+    margin-top: 70px;
+}
+.button_dark {
+    font-size: 14pt;
+    position: absolute;
+    right: 10px;
+    bottom: 80px;
+    display: inline-block;
+    margin: -20px 10px 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    -webkit-transition: border .5s, font-size .5s;
+    -moz-transition: border .5s, font-size .5s;
+    -o-transition: border .5s, font-size .5s;
+    transition: border .5s, font-size .5s;
+    border: 4px solid #fff;
+}
+.button_dark:hover {
+    border: 4px solid #d3044a;
+}
+.encryption_right .lock {
+    top: auto;
+    right: 10px;
+    bottom: 10px;
+    left: auto;
+}
+.encryption_right {
+    z-index: 1;
+    box-sizing: border-box;
+    margin-left: -4px;
+}
+.encryption_right img {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+}
+.web_design {
+    height: auto;
+    color: #000;
+    background-color: #a78798;
+}
+.web_design .growable_line {
+    position: relative;
+    z-index: -10;
+    top: -20px;
+    border: 1px solid #000;
+}
+.scrolling_webpage {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+    margin-right: auto;
+    margin-bottom: -50px;
+    margin-left: auto;
+}
+.contain_browser {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+}
+.browser {
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+}
+.browser_button {
+    position: absolute;
+    top: 4.5px;
+    width: 14.5px;
+    height: 14.5px;
+    opacity: 0;
+    border-radius: 100%;
+}
+.browser_button:first-child {
+    left: 14px;
+    background-color: red;
+}
+.browser_button:nth-child(2) {
+    left: 40px;
+    background-color: #f7db6d;
+}
+.browser_button:nth-child(3) {
+    left: 66px;
+    background-color: #20a06f;
+}
+.site {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    width: 600px;
+    -webkit-transition: width .5s, transform 15s ease-in-out;
+    -moz-transition: width .5s, transform 15s ease-in-out;
+    -o-transition: width .5s, transform 15s ease-in-out;
+    transition: width .5s, transform 15s ease-in-out;
+}
+.medical_left {
+    box-sizing: border-box;
+    border-bottom: 4px solid #333;
+}
+.medical_left hr {
+    width: 140px;
+    margin-top: 60px;
+}
+.medical_left p {
+    margin-top: 60px;
+}
+.medical_right {
+    z-index: 1;
+    box-sizing: border-box;
+    margin-left: -4px;
+    border-bottom: 4px solid #333;
+}
+.medical_right img {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    box-sizing: border-box;
+    width: 325px;
+    border: 2px solid #333;
+}
+@media screen and (max-width: 920px) {
+    .encryption_left {
+        border-right: 2px solid rgba(1, 1, 1, 0);
+    }
+    .encryption_left .side_title {
+        font-size: 20pt;
+    }
+    .encryption_left hr {
+        margin-top: 55px;
+    }
+    .encryption_left p {
+        margin-top: 50px;
+    }
+    .encryption_right {
+        margin-left: -4.5px;
+        border-left: 2px solid rgba(1, 1, 1, 0);
+    }
+    .medical_left {
+        border-right: 2px solid rgba(1, 1, 1, 0);
+    }
+    .medical_right {
+        margin-left: -4.5px;
+        border-left: 2px solid rgba(1, 1, 1, 0);
+    }
+    .medical_left .button_dark {
+        bottom: 35px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .kerbal .full_width {
+        margin-top: 20px;
+    }
+    .encryption_left {
+        height: auto;
+        padding-bottom: 30px;
+    }
+    .medical_left p, .encryption_left p {
+        padding-top: 20px;
+    }
+    .encryption_left, .medical_left {
+        border-bottom: rgba(0, 0, 0, 0);
+    }
+    .button_dark {
+        position: relative;
+        top: 40px;
+        left: 0;
+    }
+    .encryption_right {
+        height: 320px;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .encryption_right img {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        height: 300px;
+        margin-top: 10px;
+    }
+    .lock {
+        display: none;
+    }
+    .scrolling_webpage, .contain_browser, .browser {
+        height: 200px;
+    }
+    .scrolling_webpage, .contain_browser, .browser, .site {
+        width: 300px;
+    }
+    .browser_button:first-child, .browser_button:nth-child(2), .browser_button:nth-child(3) {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .web_design .growable_line {
+        top: 0;
+    }
+    .medical_left {
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .medical_left hr {
+        width: 100px;
+        margin-top: 50px;
+    }
+    .encryption_left p, .medical_left p {
+        font-size: 12pt;
+        margin-top: 35px;
+    }
+    .medical_right {
+        height: 280px;
+        margin-left: 0;
+    }
+    .medical_right img {
+        top: 0;
+        left: 50%;
+        width: auto;
+        height: 280px;
+        margin: 0 0 0 -151px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .scrolling_webpage, .contain_browser, .browser {
+        width: 280px;
+        height: 180px;
+    }
+    .site {
+        width: 290px;
+    }
+    .medical_right {
+        height: 270px;
+        margin: 10px 0 0 0;
+    }
+    .medical_right img {
+        width: auto;
+        height: 270px;
+        margin: 0 0 0 -140px;
+    }
+}
+@media screen and (max-width: 455px) {
+    .kerbal img {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .kerbal img {
+        width: 90%;
+    }
+}
